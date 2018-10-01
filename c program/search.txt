@@ -1,0 +1,3 @@
+indexOfSearchElement= low+((high-low)/(a[high]-a[low]))*(searchelement-a[low]);
+
+//sorted uniformly distributed arraay;

@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main()
+{
+    FILE *f;
+    f=fopen("Nasa.txt","w+");
+    fprintf(f,"hi, this is nasa)
+}

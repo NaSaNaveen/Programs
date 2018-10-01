@@ -1,0 +1,80 @@
+#include<stdio.h>
+int main()
+{
+    char x[10][100];
+    int n,i,j;
+
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%s",x[i]);
+    }
+
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<strlen(x[i]);j++)
+        {
+            if(i%2==0)
+            {
+                if(j%2==0)
+                {
+                    x[i][j]=toupper(x[i][j]);
+                }
+                else
+                {
+                    x[i][j]=tolower(x[i][j]);
+                }
+            }
+            else
+            {
+                if(j%2==0)
+                {
+                    x[i][j]=tolower(x[i][j]);
+                }
+                else
+                {
+                    x[i][j]=toupper(x[i][j]);
+                }
+            }
+        }
+    }
+
+    for(i=0;i<n;i++)
+    {
+        printf("%s\n",x[i]);
+    }
+
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<strlen(x[i]);j++)
+        {
+            if(i%2==0)
+            {
+                if(j%2==0)
+                {
+                    x[i][j]=tolower(x[i][j]);
+                }
+                else
+                {
+                    x[i][j]=toupper(x[i][j]);
+                }
+            }
+            else
+            {
+                if(j%2==0)
+                {
+                    x[i][j]=toupper(x[i][j]);
+                }
+                else
+                {
+                    x[i][j]=tolower(x[i][j]);
+                }
+            }
+        }
+    }
+    for(i=n-1;i>=0;i--)
+    {
+        printf("%s\n",x[i]);
+    }
+}
